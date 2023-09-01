@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-4 mb-4">UNEC “Rəqəmsal Könüllülər” Təşkilatı üzvlük qeydiyyatı</h1>
+            <form method="post">
+                <div class="form-group mb-4">
+                    <label for="Ad">Ad:</label>
+                    <input class="form-control" type="text" id="Ad" name="Ad" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="Soyad">Soyad:</label>
+                    <input  class="form-control" type="text" id="Soyad" name="Soyad" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="Telefon nömrəniz">Telefon nömrəniz:</label>
+                    <input class="form-control" type="text" id="Telefon nömrəniz" name="Telefon nömrəniz" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="date">Doğum tarixi:</label>
+                    <input class="form-control" type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label>Təhsil aldığınız fakültə:</label>
+                    <br>
+                    <div class="btn-group-verical" id="occupation">
+                        <input class="btn-check form-control"  type="radio" id="Beynəlxalq İqtisadiyyat Məktəbi" name="occupation" value="Beynəlxalq İqtisadiyyat Məktəbi" required>
+                        <label class="btn btn-outline-secondary" for="Beynəlxalq İqtisadiyyat Məktəbi">Beynəlxalq İqtisadiyyat Məktəbi</label>
+
+                        <input class="btn-check form-control" type="radio" id="Rəqəmsal İqtisadiyyat" name="occupation"  value="Rəqəmsal İqtisadiyyat" required>
+                        <label class="btn btn-outline-secondary" for="Rəqəmsal İqtisadiyyat">Rəqəmsal İqtisadiyyat</label>
+
+                        <input class="btn-check form-control" type="radio" id="TÜDİFAK" name="occupation" value="TÜDİFAK" required>
+                        <label class="btn btn-outline-secondary" for="TÜDİFAK">TÜDİFAK</label>
+
+                        <input class="btn-check form-control" type="radio" id="Maliyyə və Mühasibat" name="occupation" value="Maliyyə və Mühasibat" required>
+                        <label class="btn btn-outline-secondary" for="Maliyyə və Mühasibat">Maliyyə və Mühasibat</label>
+
+                        <input class="btn-check form-control" type="radio" id="Biznes və Menecment" name="occupation" value="Biznes və Menecment" required>
+                        <label class="btn btn-outline-secondary" for="Biznes və Menecment">Biznes və Menecment</label>
+
+                        <input class="btn-check form-control" type="radio" id="İqtisadiyyat və İdarəetmə" name="occupation" value="İqtisadiyyat və İdarəetmə" required>
+                        <label class="btn btn-outline-secondary" for="İqtisadiyyat və İdarəetmə">İqtisadiyyat və İdarəetmə</label>
+
+                        <input class="btn-check form-control" type="radio" id="Mühəndislik" name="occupation" value="Mühəndislik" required>
+                        <label class="btn btn-outline-secondary" for="Mühəndislik">Mühəndislik</label>
+
+                        <input class="btn-check form-control" type="radio" id="Rus İqtisad Məktəbi" name="occupation" value="Rus İqtisad Məktəbi" required>
+                        <label class="btn btn-outline-secondary" for="Rus İqtisad Məktəbi">Rus İqtisad Məktəbi</label>
+
+                        <input class="btn-check form-control" type="radio" id="UNEC Dizayn Məktəbi" name="occupation" value="UNEC Dizayn Məktəbi" required>
+                        <label class="btn btn-outline-secondary" for="UNEC Dizayn Məktəbi">UNEC Dizayn Məktəbi</label>
+
+                        <input class="btn-check form-control" type="radio" id="SABAH" name="occupation" value="SABAH" required>
+                        <label class="btn btn-outline-secondary" for="SABAH">SABAH</label>
+                    </div>
+                </div>
+                <button class="btn btn-secondary mb-4"  type="submit">Submit</button>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="alert alert-success">
+                    {% for message in messages %}
+                          {{ message }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endwith %}
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
