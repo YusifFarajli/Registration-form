@@ -53,7 +53,7 @@ def index():
 
         flash(f"{Ad},müraciətiniz qeydə alındı!","success")
 
-    return render_template ("index.html")
+    return render_template("index.html")
 
 if __name__== "__main__":
     with app.app_context():
